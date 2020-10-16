@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" >
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
+  
   <title>Password Gen</title>
 </head>
 <body>
@@ -21,7 +21,7 @@
           <br />
           <input type="text" id="display" placeholder="create password here">
           <br />
-          <input type="range" min="25" max="250" name="slider" id="slider" >
+          <input type="range" min="8" max="128" name="slider" id="slider" >
           <br />
           <button onclick="generate()">Create</button>
           <button onclick="">Copy to Clipboard</button>
@@ -29,6 +29,9 @@
         </div>
         <div class="previous">
           <b>Previosly Created Passwords</b>
+          <br />
+          <div id="lastPass"></div>
+
         </div>
       </div>
     </div>
@@ -36,6 +39,6 @@
 
   
 
-
+<script src="script.js"></script>
 </body>
 </html>

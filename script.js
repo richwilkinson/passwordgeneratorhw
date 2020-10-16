@@ -15,5 +15,11 @@ function generate(){
     //displays password in textbox
     document.getElementById("display").value = password;
 
+    //add password to previously generated section
+    document.getElementById("lastPass").innerHTML += password + "<br />";
+
 }
+
+//set default length display of 8
+document.getElementById("length").innerHTML = "length: 8"
 console.log(generate)
