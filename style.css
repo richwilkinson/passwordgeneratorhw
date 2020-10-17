@@ -12,9 +12,25 @@
 #slider{
     width: 100%;
 }
+#length{
+    display: inline-block;
+    width: 100px;
+}
 body{
     background-image: url();
 }
 .previous{
     margin-bottom: 20px;
+}
+.setting{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+}
+@media screen and (max-width: 800px) {
+    #lastPass{
+        font-size: 12px;
+        font-weight: bold;
+}
 }

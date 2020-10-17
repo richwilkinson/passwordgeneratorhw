@@ -24,14 +24,31 @@
           <input type="range" min="8" max="128" name="slider" id="slider" >
           <br />
           <button onclick="generate()">Create</button>
-          <button onclick="">Copy to Clipboard</button>
+          <button onclick="copyPass()">Copy to Clipboard</button>
           <div id="length"></div>
-        </div>
-        <div class="previous">
-          <b>Previosly Created Passwords</b>
-          <br />
+            <div class="settings">
+              <div class="setting">
+                <label for="uppercase">Include uppercase letters</label>
+                <input type="checkbox" id="upperCase">
+              </div>
+              <div class="setting">
+                <label for="lowercase">Include lowercase letters</label>
+                <input type="checkbox"  id="lowerCase">
+              </div>
+              <div class="setting">
+                <label for="numbers">Include numbers</label>
+                <input type="checkbox" id="numbers">
+              </div>
+              <div class="setting">
+                <label for="symbols">Include symbols</label>
+                  <input type="checkbox" id="symbols">
+              </div>
+            </div>
+            <div class="previous">
+              <b>Previosly Created Passwords</b>
+              <br />
+            </div>
           <div id="lastPass"></div>
-
         </div>
       </div>
     </div>
