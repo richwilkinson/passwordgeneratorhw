@@ -17,10 +17,10 @@
         <form id="passwordGeneratorForm">
             <!--character range input-->
             <label for="characterAmountNumber">Number of Characters</label>
-            <div class="character-amount-number">
+            <article class="character-amount-number">
                 <input type="range" min="8" max="128" id="characterAmountNumber">
                 <input class="number-input" type="number" min="8" max="128" id="characterAmountRange">
-            </div>
+            </article>
             <!--Character select-->
             <label for="">Include Uppercase</label>
             <input type="checkbox" id="includeUppercase">
@@ -33,9 +33,11 @@
             <!--buttons-->
             <button class="btn" type="submit">Create</button>
         </form>
-        <div>
+        <aside>
             <button class="btn" onclick="myFunction()">Copy</button>
-        </div>
+        </aside>
+        <div id="lastPass"></div>
+
     </main>
     
     <script src="script.js"></script>
