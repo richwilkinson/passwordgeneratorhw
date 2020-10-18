@@ -1,3 +1,5 @@
+/*styles main body elements*/
+
 body {
     background-color: transparent;
     background-image: url(red-lock.jpg);
@@ -9,7 +11,7 @@ body {
     align-items: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
+/*styles container features border margin padding*/
 .container {
     background-color: transparent;
     padding: 3rem;
@@ -21,6 +23,9 @@ body {
     flex-direction: column;
 }
 
+
+    
+
 form {
     display: grid;
     grid-template-columns: auto auto;
@@ -29,7 +34,7 @@ form {
     justify-content: center;
     align-items: center;
 }
-
+/* styling for text and numbers*/
 .title {
     margin: 0;
     text-align: center;
@@ -47,7 +52,7 @@ label {
 .number-input {
     width: 3rem;
 }
-
+/*styles password display box*/
 .password-display {
     background-color: white;
     color: black;
@@ -62,7 +67,7 @@ label {
     border-radius: .5rem;
     font-size: 13px;
 }
-
+/*styles buttons*/
 .btn {
     grid-column: span 2;
     background-color: transparent;
