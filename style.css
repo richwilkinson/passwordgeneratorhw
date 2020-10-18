@@ -1,36 +1,19 @@
-.content{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    background-color: darkgray;
-    padding: 20px;
-    width: 100%;
+body{
+    color: white;
+}
 
-}
-#display{
-    width: 100%;
-}
-#slider{
-    width: 100%;
-}
-#length{
-    display: inline-block;
-    width: 100px;
+.jumbotron{
+    background-color: transparent;
 }
 body{
-    background-image: url();
+    background-image: url(red-lock.jpg);
 }
-.previous{
-    margin-bottom: 20px;
+.btn {
+    background-color: black;
 }
-.setting{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 15px 0;
+.btn:hover {
+    background-color: black;
 }
-@media screen and (max-width: 800px) {
-    #lastPass{
-        font-size: 12px;
-        font-weight: bold;
-}
+.black {
+    color: black;
 }
