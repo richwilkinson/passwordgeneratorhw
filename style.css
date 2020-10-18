@@ -2,11 +2,23 @@ body{
     color: white;
 }
 
-.jumbotron{
+.container{
     background-color: transparent;
+    padding: 20px;
 }
 body{
     background-image: url(red-lock.jpg);
+}
+#display {
+    width: 100%;
+}
+#slider{
+    width: 100%;
+    margin-bottom: 10px;
+}
+#length{
+    display: inline-block;
+    width: 100px;
 }
 .btn {
     background-color: black;
@@ -16,4 +28,8 @@ body{
 }
 .black {
     color: black;
+}
+
+.previousPass{
+    text-align: center;
 }
