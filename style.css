@@ -1,25 +1,31 @@
+/*text to color to all body element*/
 body{
     color: white;
 }
-
+/*styling to container*/
 .container{
     background-color: transparent;
     padding: 20px;
 }
+/*adds cool background image*/
 body{
     background-image: url(red-lock.jpg);
 }
+/*adjusts text box width*/
 #display {
     width: 100%;
 }
+/*adjusts width and margin of slidr*/
 #slider{
     width: 100%;
     margin-bottom: 10px;
 }
+/*lines up length output next to buttons*/
 #length{
     display: inline-block;
     width: 100px;
 }
+/*styles buttons*/
 .btn {
     background-color: black;
 }
@@ -29,7 +35,7 @@ body{
 .black {
     color: black;
 }
-
+/* styles previously created password display*/
 .previousPass{
     text-align: center;
 }

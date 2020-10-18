@@ -21,7 +21,7 @@ function generate(){
 }
 
 //set default length display of 8
-document.getElementById("length").innerHTML = "length: 8";
+document.getElementById("length").innerHTML = "length: 68";
 
 //set length
 document.getElementById("slider").oninput = function(){
