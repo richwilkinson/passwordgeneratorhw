@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <title>password creation</title>
 </head>
@@ -15,22 +14,26 @@
         <form id="passwordGeneratorForm">
             <label for="characterAmountNumber">Number of Characters</label>
             <div class="character-amount-number">
-            <input type="range" min="8" max="128" id="characterAmountNumber">
-            <input class="number-input" type="number" min="8" max="128" id="characterAmountRange">
+                <input type="range" min="8" max="128" id="characterAmountNumber">
+                <input class="number-input" type="number" min="8" max="128" id="characterAmountRange">
             </div>
-
+            
             <label for="">Include Uppercase</label>
             <input type="checkbox" id="includeUppercase">
-
+            
             <label for="">Include numbers</label>
             <input type="checkbox" id="includeNumber">
-
+            
             <label for="">Include symbols</label>
             <input type="checkbox" id="includeSymbol">
-
+            
             <button class="btn" type="submit">Create</button>
         </form>
+        <div>
+            <button class="btn" onclick="myFunction()">Copy</button>
+        </div>
     </main>
     
+    <script src="script.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@ body {
     background-color: transparent;
     background-image: url(red-lock.jpg);
     margin: 0;
-    color: white;
+    color: navajowhite;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,7 +14,7 @@ body {
     background-color: transparent;
     padding: 3rem;
     border-radius: 1rem;
-    border: 2px solid black;
+    border: 2px solid;
     display: flex;
     justify-content: center;
     align-items: center;
