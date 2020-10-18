@@ -1,45 +1,65 @@
-//generate random password
-function generate(){
-    //set password length/complexity
-    const complexity = document.getElementById("slider").value;
+let characterAmountRange = document.getElementById("characterAmountRange")
 
-    //set possible password values
-    const values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz123456789!@#$%^&*";
+let characterAmountNumber = document.getElementById("characterAmountNumber")
 
-    let password = "";
+let includeUppercaseElement = document.getElementById("includeUppercase")
 
-    //create for loop to choose password
-    for(var i=0; i <= complexity; i++) {
-        password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
-    }
+let includeNumberElement = document.getElementById("includeNumber")
 
-    //add password to display
-    document.getElementById("display").value = password;
+let includeSymbolElement = document.getElementById("includeSymbol")
 
-    //add password to created section
-    document.getElementById("lastPass").innerHTML += password + "<br />";
-}
+let form = document.getElementById("passwordGeneratorForm")
 
-//set default length display of 8
-document.getElementById("length").innerHTML = "length: 68";
+let display = document.getElementById("display")
 
-//set length
-document.getElementById("slider").oninput = function(){
-    if (document.getElementById("slider").value > 0){
-        document.getElementById("length").innerHTML = "length: " + document.getElementById("slider").value;
-    } else{
-        document.getElementById("length").innerHTML = "length: 1";
-    }
-}
+let uppercase_char_code = arrayLowHigh(65, 90)
 
-//function to copy password
-function copypassword(){
-    document.getElementById("display").select();
+let lowercase_char_code = arrayLowHigh(97, 122)
 
-    document.execCommand("Copy");
+let number_char_code = arrayLowHigh(48, 57)
 
-    alert("password copied!")
-}
+let symbol_char_code = arrayLowHigh(33, 47).concat(arrayLowHigh(58, 64)
+)
 
+characterAmountNumber.addEventListener("input", syncCharacterAmount)
+characterAmountRange.addEventListener("input", syncCharacterAmount) 
 
-
+form.addEventListener("submit", e => {
+    e.preventDefault()
+    let characterAmount = characterAmountNumber.value
+    let includeUppercase = includeUppercaseElement.checked
+    let includeNumber = includeNumberElement.checked
+    let includeSymbol = includeSymbolElement.checked
+    let password = generatePassword(characterAmount, includeUppercase,
+        includeNumber, includeSymbol)
+        display.innerText = password
+    })
+    
+    function generatePassword(characterAmount, includeUppercase,
+        includeNumber, includeSymbol) {
+            let charCodes = lowercase_char_code
+            if (includeUppercase) charCodes = charCodes.concat(uppercase_char_code)
+            if (includeNumber) charCodes = charCodes.concat(number_char_code)
+            if (includeSymbol) charCodes = charCodes.concat(symbol_char_code)
+            
+            let passwordCharacters = []
+            for (let i = 0; i < characterAmount; i++) {
+                let characterCode = charCodes[Math.floor(Math.random() * charCodes.length)]
+                passwordCharacters.push(String.fromCharCode(characterCode))
+            }
+            return passwordCharacters.join('')
+        }
+        
+        function arrayLowHigh(low, high) {
+            let array = []
+            for (let i = low; i <= high; i++) {
+                array.push(i)
+            }
+            return array
+        }
+        
+        function syncCharacterAmount(e) {
+            let value = e.target.value
+            characterAmountNumber.value = value
+            characterAmountRange.value = value
+        }
